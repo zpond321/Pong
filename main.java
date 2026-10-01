@@ -1,6 +1,5 @@
 import javax.swing.*;
 import java.awt.event.*;
-import javax.swing.Timer;
 import java.awt.Color;
 import java.util.ArrayList;
 import java.awt.Graphics;
@@ -19,6 +18,10 @@ public class main {
         ball pongBall = new ball(200,100, 1, 1);  
         pongBall.setBounds(0,0, 10, 10);
         pongBall.setLocation(200, 100);
+        walls.add(new wall(0, 0, 400, 1));
+        walls.add(new wall(0, 399, 400, 1));
+        walls.add(new wall(0, 0, 1, 400));
+        walls.add(new wall(399, 0, 1, 400));
         f.add(pongBall);
         f.revalidate();
         f.repaint();
