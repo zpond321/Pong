@@ -39,8 +39,13 @@ public class paddle extends JPanel{
     }
     public void keepInBounds()
     {
-        if (x<0){
-            x = 0;
+        if (y<0){
+            y = 0;
+        }
+        if(y+dY>399)
+        {
+            y=399-dY;
+
         }
     }
 }

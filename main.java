@@ -37,10 +37,10 @@ public class main {
         f.repaint();
 
         //Setting up left 
-        paddle leftPaddle = new paddle(10, 10, 10, 20, true);
+        paddle leftPaddle = new paddle(20, 10, 10, 60, true);
         f.add(leftPaddle);
-        leftPaddle.setBounds(10,10, 10, 60);
-        leftPaddle.setLocation(10,10);
+        leftPaddle.setBounds(20,10, 10, 60);
+        leftPaddle.setLocation(20,10);
         f.revalidate();
         f.repaint();
 
@@ -49,18 +49,20 @@ public class main {
             @Override 
             public void keyPressed(KeyEvent e) {
                 
-                leftPaddle.move(e.getKeyCode() == KeyEvent.VK_UP ? -2 : 0);    
-                leftPaddle.setLocation(leftPaddle.getX(), leftPaddle.getY());
-            }
-        });
-        main.f.addKeyListener(new KeyAdapter() {
-            @Override 
-            public void keyPressed(KeyEvent e) {
 
-                leftPaddle.move(e.getKeyCode() == KeyEvent.VK_DOWN ? 2 : 0);    
+                if(e.getKeyCode() == KeyEvent.VK_UP)
+                    {
+                        leftPaddle.move(-3);
+                    }
+                if(e.getKeyCode() == KeyEvent.VK_DOWN)
+                    {
+                        leftPaddle.move(3);
+                    }    
+                leftPaddle.keepInBounds(); 
                 leftPaddle.setLocation(leftPaddle.getX(), leftPaddle.getY());
             }
         });
+
 
 
         //Main game loop
@@ -72,6 +74,7 @@ public class main {
             
             f.repaint();
             f.setVisible(true);
+            
         });
 
 
