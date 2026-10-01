@@ -33,8 +33,7 @@ public class ball extends JPanel{
     }
     public void move()
     {
-        x+=speedX;
-        y+=speedY;
+
     }
     public int getX()
     {
@@ -46,7 +45,22 @@ public class ball extends JPanel{
     }    
     public void testBorder()
     {
-        
+        if(x>399)
+        {
+            bounceVertically();
+        }
+        if(x<0)
+        {
+            bounceVertically();
+        }
+        if(y>399)
+        {
+            bounceHorizontally();
+        }
+        if(y<0)
+        {
+            bounceHorizontally();
+        }
     }
     public void increaseSpeed()
     {
