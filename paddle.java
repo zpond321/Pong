@@ -10,14 +10,12 @@ public class paddle extends JPanel{
     private int y;
     private int dX;
     private int dY;
-    private boolean isLeft;
-    public paddle(int intX, int intY, int dimensionX, int dimensionY, boolean left)
+    public paddle(int intX, int intY, int dimensionX, int dimensionY)
     {
         x = intX;
         y = intY;
         dX = dimensionX;
         dY = dimensionY;
-        isLeft = left;
     }
     protected void paintComponent(Graphics g)
     {
