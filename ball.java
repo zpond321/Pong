@@ -53,6 +53,8 @@ public class ball extends JPanel{
             x=200;
             y=200;
             main.pointRight();
+            main.score.setText(main.getLeftPoints() + " | " + main.getRightPoints());
+            speed=2;
         }
         if(x>=390)
         {
@@ -60,6 +62,7 @@ public class ball extends JPanel{
             y=200;
             main.pointLeft();
             main.score.setText(main.getLeftPoints() + " | " + main.getRightPoints());
+            speed=2;
         }
         //Bounce on top and bottom
         if(y<=0)
@@ -97,7 +100,7 @@ public class ball extends JPanel{
             amountofHits++;
             if(amountofHits>2)
             {
-                speed+=0.75;
+                speed+=1.25;
                 amountofHits=0;
                 System.out.println(speed);
             }
@@ -125,7 +128,7 @@ public class ball extends JPanel{
             amountofHits++;
             if(amountofHits>2)
             {
-                speed+=0.75;
+                speed+=1.25;
                 amountofHits=0;
                 System.out.println(speed);
             }
