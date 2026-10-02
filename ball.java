@@ -35,7 +35,7 @@ public class ball extends JPanel{
     {
         x+=(int) Math.round(speed*Math.cos(Math.toRadians(angle)));
         y+=(int) Math.round(speed*Math.sin(Math.toRadians(angle)));
-        System.out.println(Math.round(speed*Math.cos(Math.toRadians(angle))));
+        
     }
     public int getX()
     {
@@ -97,8 +97,9 @@ public class ball extends JPanel{
             amountofHits++;
             if(amountofHits>2)
             {
-                speed+=0.25;
+                speed+=0.75;
                 amountofHits=0;
+                System.out.println(speed);
             }
         }
         //right paddle bounce
@@ -124,8 +125,9 @@ public class ball extends JPanel{
             amountofHits++;
             if(amountofHits>2)
             {
-                speed+=0.25;
+                speed+=0.75;
                 amountofHits=0;
+                System.out.println(speed);
             }
         }
     }
