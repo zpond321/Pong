@@ -1,4 +1,4 @@
 #How to run!!
-#Go into the terminal type
-#javac Main.java
-#java Main
+\n#Go into the terminal type
+\n#javac Main.java
+\n#java Main
