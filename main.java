@@ -3,7 +3,6 @@ import java.awt.event.*;
 import java.awt.Color;
 import java.util.ArrayList;
 import java.awt.Graphics;
-import javax.swing.JLabel;
 public class main {
     public static JFrame f= new JFrame();
     public static ArrayList<wall> walls= new ArrayList<wall>();
@@ -24,7 +23,8 @@ public class main {
         f.getContentPane().setBackground(Color.BLACK); 
         f.setSize(400, 400);
         f.setLayout(null);
-        
+        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
         //Creating ball
         ball pongBall = new ball(200,100, 2, 45);  
         pongBall.setBounds(0,0, 10, 10);
